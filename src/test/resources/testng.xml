@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Swaglabs eCommerce Suite">
+  <test name="Automation Test">
+    <!-- <parameter name="username" value="johansebastian"></parameter>
+    <parameter name="password" value="123qwe"></parameter> -->
+
+    <classes>
+      <class name="com.juaracoding.ecom.AuthenticationTest"></class>
+    </classes>
+  </test>
+</suite>
