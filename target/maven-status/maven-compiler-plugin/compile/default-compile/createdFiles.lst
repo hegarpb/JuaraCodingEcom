@@ -1,1 +1,6 @@
+com\juaracoding\ecom\repositories\JQueryDragDropRepository.class
+com\juaracoding\ecom\utils\DriverUtil.class
+com\juaracoding\ecom\repositories\InventoryRepository.class
 com\juaracoding\ecom\utils\ExcelUtils.class
+com\juaracoding\ecom\utils\LoginUtil.class
+com\juaracoding\ecom\utils\DriverManager.class
