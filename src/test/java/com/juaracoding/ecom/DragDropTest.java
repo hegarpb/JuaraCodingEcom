@@ -2,7 +2,7 @@ package com.juaracoding.ecom;
 
 import java.time.Duration;
 
-import org.openqa.selenium.By;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,7 +10,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.juaracoding.ecom.repositories.JQueryDragDropRepository;
+import com.juaracoding.ecom.repositories.JQueryRepository;
 import com.juaracoding.ecom.utils.DriverManager;
 
 public class DragDropTest {
@@ -22,8 +22,8 @@ public class DragDropTest {
     driver.get("https://jquery-drag-drop-demo.webflow.io/");
 
     Actions builder = new Actions(driver);
-    WebElement draggable = driver.findElement(JQueryDragDropRepository.draggable);
-    WebElement droppable = driver.findElement(JQueryDragDropRepository.droppable);
+    WebElement draggable = driver.findElement(JQueryRepository.draggable);
+    WebElement droppable = driver.findElement(JQueryRepository.droppable);
 
     builder.dragAndDrop(draggable, droppable).perform();
 
@@ -43,8 +43,7 @@ public class DragDropTest {
     driver.get("https://jqueryui.com/resources/demos/resizable/default.html");
     Actions builder = new Actions(driver);
 
-    WebElement resizer = driver.findElement(By.xpath("/html/body/div/div[3]"));
-    
+    WebElement resizer = driver.findElement(JQueryRepository.resizer);
 
     builder.moveToElement(resizer)
         .pause(Duration.ofSeconds(1))
