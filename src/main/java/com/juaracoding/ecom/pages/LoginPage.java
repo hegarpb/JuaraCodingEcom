@@ -1,36 +1,46 @@
 package com.juaracoding.ecom.pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
   private WebDriver driver;
 
-  private By usernameField = By.id("user-name");
-  private By passwordField = By.id("password");
-  private By loginButton = By.id("login-button");
-  private By errorMessage = By.cssSelector("h3[data-test='error']");
+  @FindBy(id = "user-name")
+  private WebElement username;
+
+  @FindBy(id = "password")
+  private WebElement password;
+
+  @FindBy(id = "login-button")
+  private WebElement loginButton;
+
+  @FindBy(css = "h3[data-test='error']")
+  private WebElement errorMessage;
 
   public LoginPage(WebDriver driver) {
     this.driver = driver;
+    PageFactory.initElements(this.driver, this);
   }
 
   public void setUsername(String value) {
-    driver.findElement(usernameField).sendKeys(value);
+    username.sendKeys(value);
   }
 
   public void setPassword(String value) {
-    driver.findElement(passwordField).sendKeys(value);
+    password.sendKeys(value);
   }
 
   public void clickLoginButton() {
-    driver.findElement(loginButton).click();
+    loginButton.click();
   }
 
   public String getErrorMessage() {
     try {
-      return driver.findElement(errorMessage).getText();
+      return errorMessage.getText();
     } catch (NoSuchElementException e) {
       return null;
     }

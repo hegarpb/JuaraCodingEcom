@@ -12,7 +12,7 @@ import com.juaracoding.ecom.utils.DriverManager;
 public class AuthenticationTest {
 
   @Test(dataProvider = "loginDataProvider", dataProviderClass = DataTestProvider.class)
-  public void loginTest(String username, String password, String errorMessage) throws InterruptedException {
+  public void loginTest(String username, String password, String expected) throws InterruptedException {
     DriverManager driverManager = new DriverManager();
     WebDriver driver = driverManager.getDriver();
 
@@ -21,17 +21,16 @@ public class AuthenticationTest {
     LoginPage loginPage = new LoginPage(driver);
 
     loginPage.performLogin(username, password);
+    String actual = loginPage.getErrorMessage();
 
-    if (loginPage.getErrorMessage() != null) {
-      String actual = loginPage.getErrorMessage();
-      Assert.assertEquals(actual, errorMessage);
-    } else {
+    if (actual == null) {
       InventoryPage inventoryPage = new InventoryPage(driver);
-      String actual = inventoryPage.getCurrentURL();
-      String expected = "https://www.saucedemo.com/v1/inventory.html";
-      Assert.assertEquals(actual, expected);
+      actual = inventoryPage.getCurrentURL();
     }
 
+    Assert.assertEquals(actual, expected);
+
     driverManager.quitDriver();
+
   }
 }

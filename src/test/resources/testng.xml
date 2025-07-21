@@ -11,17 +11,7 @@
     </classes>
   </test>
 
-  <test name="Inventory or Product Test" enabled="false">
-    <parameter name="username" value="standard_user"></parameter>
-    <parameter name="password" value="secret_sauce"></parameter>
-    <parameter name="baseURL" value="https://www.saucedemo.com/v1/index.html"></parameter>
-
-    <classes>
-      <class name="com.juaracoding.ecom.InventoryTest"></class>
-    </classes>
-  </test>
-
-  <test name="Inventory or Product Test " enabled="false">
+  <test name="Drag Drop and Resizing Test">
     <classes>
       <class name="com.juaracoding.ecom.DragDropTest"></class>
     </classes>
