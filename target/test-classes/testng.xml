@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Swaglabs eCommerce Suite">
-  <test name="Authentication Test" enabled="false">
+  <test name="Authentication Test">
     <parameter name="username" value="standard_user"></parameter>
     <parameter name="password" value="secret_sauce"></parameter>
     <parameter name="baseURL" value="https://www.saucedemo.com/v1/index.html"></parameter>
@@ -21,7 +21,7 @@
     </classes>
   </test>
 
-  <test name="Inventory or Product Test">
+  <test name="Inventory or Product Test " enabled="false">
     <classes>
       <class name="com.juaracoding.ecom.DragDropTest"></class>
     </classes>
