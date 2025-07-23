@@ -1,13 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-16T22:01:06 WIB" name="Swaglabs eCommerce Suite" finished-at="2025-07-16T22:02:37 WIB" duration-ms="90801">
+  <suite started-at="2025-07-23T23:48:09 WIB" name="Swaglabs eCommerce Suite" finished-at="2025-07-23T23:50:05 WIB" duration-ms="115431">
     <groups>
     </groups>
-    <test started-at="2025-07-16T22:01:06 WIB" name="Automation Test" finished-at="2025-07-16T22:02:37 WIB" duration-ms="90801">
+    <test started-at="2025-07-23T23:48:09 WIB" name="Authentication Test" finished-at="2025-07-23T23:50:05 WIB" duration-ms="115431">
+      <class name="com.juaracoding.ecom.AddToCartTest">
+        <test-method signature="addToCartTest()[pri:0, instance:com.juaracoding.ecom.AddToCartTest@5c30a9b0]" started-at="2025-07-23T23:49:47 WIB" name="addToCartTest" finished-at="2025-07-23T23:50:05 WIB" duration-ms="17892" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addToCartTest -->
+      </class> <!-- com.juaracoding.ecom.AddToCartTest -->
+      <class name="com.juaracoding.ecom.InventoryTest">
+        <test-method signature="productDisplayTest()[pri:0, instance:com.juaracoding.ecom.InventoryTest@635eaaf1]" started-at="2025-07-23T23:49:13 WIB" name="productDisplayTest" finished-at="2025-07-23T23:49:30 WIB" duration-ms="16647" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productDisplayTest -->
+        <test-method signature="productSortFeatureTest()[pri:0, instance:com.juaracoding.ecom.InventoryTest@635eaaf1]" started-at="2025-07-23T23:49:30 WIB" name="productSortFeatureTest" finished-at="2025-07-23T23:49:47 WIB" duration-ms="17246" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productSortFeatureTest -->
+      </class> <!-- com.juaracoding.ecom.InventoryTest -->
       <class name="com.juaracoding.ecom.AuthenticationTest">
-        <test-method signature="loginTest(java.lang.String,java.lang.String)[pri:0, instance:com.juaracoding.ecom.AuthenticationTest@21de60b4]" started-at="2025-07-16T22:01:08 WIB" name="loginTest" data-provider="loginDataProvider" finished-at="2025-07-16T22:01:33 WIB" duration-ms="25546" status="PASS">
+        <test-method signature="loginTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.juaracoding.ecom.AuthenticationTest@48ae9b55]" started-at="2025-07-23T23:48:10 WIB" name="loginTest" data-provider="loginDataProvider" finished-at="2025-07-23T23:48:32 WIB" duration-ms="21653" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -19,11 +35,16 @@
                 <![CDATA[secret_sauce]]>
               </value>
             </param>
+            <param index="2">
+              <value>
+                <![CDATA[https://www.saucedemo.com/v1/inventory.html]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method signature="loginTest(java.lang.String,java.lang.String)[pri:0, instance:com.juaracoding.ecom.AuthenticationTest@21de60b4]" started-at="2025-07-16T22:01:33 WIB" name="loginTest" data-provider="loginDataProvider" finished-at="2025-07-16T22:01:50 WIB" duration-ms="16479" status="PASS">
+        <test-method signature="loginTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.juaracoding.ecom.AuthenticationTest@48ae9b55]" started-at="2025-07-23T23:48:32 WIB" name="loginTest" data-provider="loginDataProvider" finished-at="2025-07-23T23:48:43 WIB" duration-ms="11245" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -35,27 +56,100 @@
                 <![CDATA[secret_sauce]]>
               </value>
             </param>
+            <param index="2">
+              <value>
+                <![CDATA[https://www.saucedemo.com/v1/inventory.html]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method signature="loginWithInvalidPassword()[pri:0, instance:com.juaracoding.ecom.AuthenticationTest@21de60b4]" started-at="2025-07-16T22:01:50 WIB" name="loginWithInvalidPassword" finished-at="2025-07-16T22:02:02 WIB" duration-ms="12593" status="PASS">
+        <test-method signature="loginTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.juaracoding.ecom.AuthenticationTest@48ae9b55]" started-at="2025-07-23T23:48:43 WIB" name="loginTest" data-provider="loginDataProvider" finished-at="2025-07-23T23:48:50 WIB" duration-ms="7121" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[jonosebastian]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Epic sadface: Username and password do not match any user in this service]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginWithInvalidPassword -->
-        <test-method signature="loginWithInvalidUsername()[pri:0, instance:com.juaracoding.ecom.AuthenticationTest@21de60b4]" started-at="2025-07-16T22:02:02 WIB" name="loginWithInvalidUsername" finished-at="2025-07-16T22:02:15 WIB" duration-ms="12439" status="PASS">
+        </test-method> <!-- loginTest -->
+        <test-method signature="loginTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.juaracoding.ecom.AuthenticationTest@48ae9b55]" started-at="2025-07-23T23:48:50 WIB" name="loginTest" data-provider="loginDataProvider" finished-at="2025-07-23T23:48:58 WIB" duration-ms="7671" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sambel]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Epic sadface: Username and password do not match any user in this service]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginWithInvalidUsername -->
-        <test-method signature="loginWithoutPassword()[pri:0, instance:com.juaracoding.ecom.AuthenticationTest@21de60b4]" started-at="2025-07-16T22:02:15 WIB" name="loginWithoutPassword" finished-at="2025-07-16T22:02:26 WIB" duration-ms="11649" status="PASS">
+        </test-method> <!-- loginTest -->
+        <test-method signature="loginTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.juaracoding.ecom.AuthenticationTest@48ae9b55]" started-at="2025-07-23T23:48:58 WIB" name="loginTest" data-provider="loginDataProvider" finished-at="2025-07-23T23:49:05 WIB" duration-ms="7189" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Epic sadface: Password is required]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginWithoutPassword -->
-        <test-method signature="loginWithoutUsername()[pri:0, instance:com.juaracoding.ecom.AuthenticationTest@21de60b4]" started-at="2025-07-16T22:02:26 WIB" name="loginWithoutUsername" finished-at="2025-07-16T22:02:37 WIB" duration-ms="10833" status="PASS">
+        </test-method> <!-- loginTest -->
+        <test-method signature="loginTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.juaracoding.ecom.AuthenticationTest@48ae9b55]" started-at="2025-07-23T23:49:05 WIB" name="loginTest" data-provider="loginDataProvider" finished-at="2025-07-23T23:49:13 WIB" duration-ms="7791" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Epic sadface: Username is required]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginWithoutUsername -->
+        </test-method> <!-- loginTest -->
       </class> <!-- com.juaracoding.ecom.AuthenticationTest -->
-    </test> <!-- Automation Test -->
+    </test> <!-- Authentication Test -->
   </suite> <!-- Swaglabs eCommerce Suite -->
 </testng-results>

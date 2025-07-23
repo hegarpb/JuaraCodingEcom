@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Swaglabs eCommerce Suite">
-  <test name="Automation Test">
-    <!-- <parameter name="username" value="johansebastian"></parameter>
-    <parameter name="password" value="123qwe"></parameter> -->
+  <test name="Authentication Test">
+    <parameter name="username" value="standard_user"></parameter>
+    <parameter name="password" value="secret_sauce"></parameter>
+    <parameter name="baseURL" value="https://www.saucedemo.com/v1/index.html"></parameter>
 
     <classes>
       <class name="com.juaracoding.ecom.AuthenticationTest"></class>
+      <class name="com.juaracoding.ecom.InventoryTest"></class>
+      <class name="com.juaracoding.ecom.AddToCartTest"></class>
+
     </classes>
   </test>
+
+  <!-- <test name="Drag Drop and Resizing Test">
+    <classes>
+      <class name="com.juaracoding.ecom.DragDropTest"></class>
+    </classes>
+  </test> -->
 </suite>
