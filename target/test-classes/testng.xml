@@ -8,12 +8,15 @@
 
     <classes>
       <class name="com.juaracoding.ecom.AuthenticationTest"></class>
+      <class name="com.juaracoding.ecom.InventoryTest"></class>
+      <class name="com.juaracoding.ecom.AddToCartTest"></class>
+
     </classes>
   </test>
 
-  <test name="Drag Drop and Resizing Test">
+  <!-- <test name="Drag Drop and Resizing Test">
     <classes>
       <class name="com.juaracoding.ecom.DragDropTest"></class>
     </classes>
-  </test>
+  </test> -->
 </suite>

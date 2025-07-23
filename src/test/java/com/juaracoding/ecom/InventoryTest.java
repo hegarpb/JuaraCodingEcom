@@ -15,7 +15,7 @@ import com.juaracoding.ecom.utils.LoginUtil;
 
 public class InventoryTest {
 
-  @Test()
+  @Test
   public void productDisplayTest() throws InterruptedException {
     DriverManager driverManager = new DriverManager();
     WebDriver driver = driverManager.getDriver();
@@ -55,4 +55,6 @@ public class InventoryTest {
     Assert.assertEquals(actualTitles, expectedTitles);
     driverManager.quitDriver();
   }
+
+
 }

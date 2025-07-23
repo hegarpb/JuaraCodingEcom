@@ -2,15 +2,17 @@ package com.juaracoding.ecom;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.juaracoding.ecom.pages.DragDropPage;
 import com.juaracoding.ecom.pages.ResizerPage;
 import com.juaracoding.ecom.utils.DriverManager;
 
+@Listeners(ListenerTest.class)
 public class DragDropTest {
 
-  @Test()
+  @Test
   public void dragElementTest() throws InterruptedException {
     DriverManager driverManager = new DriverManager();
     WebDriver driver = driverManager.getDriver();
@@ -23,11 +25,12 @@ public class DragDropTest {
     String expected = "Dropped!";
 
     Assert.assertEquals(actual, expected);
+    // Assert.fail();
 
     driverManager.quitDriver();
   }
 
-  @Test()
+  @Test
   public void resizeElementTest() throws InterruptedException {
     DriverManager driverManager = new DriverManager();
     WebDriver driver = driverManager.getDriver();
