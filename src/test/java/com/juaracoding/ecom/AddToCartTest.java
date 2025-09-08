@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.juaracoding.ecom.repositories.InventoryRepository;
+import com.juaracoding.ecom.pages.InventoryPage;
 import com.juaracoding.ecom.utils.DriverManager;
 import com.juaracoding.ecom.utils.LoginUtil;
 
@@ -17,7 +17,7 @@ public class AddToCartTest {
     driver.get("https://www.saucedemo.com/v1/index.html");
     LoginUtil.performLogin(driver);
 
-    WebElement btnAddToCart = driver.findElement(InventoryRepository.addToCart);
+    WebElement btnAddToCart = driver.findElement(InventoryPage.addToCart);
     btnAddToCart.click();
 
     String actual=btnAddToCart.getText();
@@ -25,7 +25,7 @@ public class AddToCartTest {
 
     Assert.assertEquals(actual, expected);
 
-    WebElement cartSize = driver.findElement(InventoryRepository.cartSize);
+    WebElement cartSize = driver.findElement(InventoryPage.cartSize);
     String actualCartsize =cartSize.getText();
     Assert.assertEquals(actualCartsize, "1");
     driverManager.quitDriver();

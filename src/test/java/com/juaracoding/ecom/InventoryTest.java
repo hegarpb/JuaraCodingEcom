@@ -9,7 +9,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import com.juaracoding.ecom.repositories.InventoryRepository;
+
+import com.juaracoding.ecom.pages.InventoryPage;
 import com.juaracoding.ecom.utils.DriverManager;
 import com.juaracoding.ecom.utils.LoginUtil;
 
@@ -24,7 +25,7 @@ public class InventoryTest {
     LoginUtil.performLogin(driver);
 
     int expected = 6;
-    int actual = driver.findElements(InventoryRepository.inventoryItem).size();
+    int actual = driver.findElements(InventoryPage.inventoryItem).size();
 
     Assert.assertEquals(actual, expected, "Jumlah produk tidak sesuai expektasi.");
     driverManager.quitDriver();
@@ -38,11 +39,11 @@ public class InventoryTest {
     LoginUtil.performLogin(driver);
 
     Select select = new Select(driver.findElement(
-        InventoryRepository.productSortContainer));
+        InventoryPage.productSortContainer));
 
     select.selectByValue("az");
 
-    List<WebElement> items = driver.findElements(InventoryRepository.inventoryItemName);
+    List<WebElement> items = driver.findElements(InventoryPage.inventoryItemName);
     List<String> actualTitles = new ArrayList<String>();
 
     for (WebElement item : items) {
