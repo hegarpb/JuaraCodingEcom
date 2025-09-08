@@ -1,8 +1,0 @@
-com\juaracoding\ecom\pages\InventoryPage.class
-com\juaracoding\ecom\pages\DragDropPage.class
-com\juaracoding\ecom\utils\DriverUtil.class
-com\juaracoding\ecom\pages\LoginPage.class
-com\juaracoding\ecom\pages\ResizerPage.class
-com\juaracoding\ecom\utils\ExcelUtils.class
-com\juaracoding\ecom\utils\LoginUtil.class
-com\juaracoding\ecom\utils\DriverManager.class
