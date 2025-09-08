@@ -25,7 +25,7 @@ Proyek ini mengotomatiskan alur pengguna mulai dari login, navigasi produk, hing
 *   **Sistem Operasi**: Windows 10
 *   **Versi Java**: JDK 21
 *   **Build Tool**: Maven (versi yang kompatibel dengan JDK 21, misal, 3.8.x atau lebih baru)
-*   **Browser**: Versi stabil terbaru Chrome, Firefox direkomendasikan.
+*   **Browser**: Versi stabil terbaru Firefox direkomendasikan.
 
 # Pendekatan Pengujian
 
